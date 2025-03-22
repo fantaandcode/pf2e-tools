@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://b84gn7fe6lbdh"]
+
+[ext_resource type="Script" uid="uid://d2k4xd0vb6ljy" path="res://scenes/indiv_tools/panel_margin.gd" id="1_mp3l7"]
+[ext_resource type="Script" uid="uid://buwlfobmejweg" path="res://scenes/indiv_tools/random_spell_roller.gd" id="1_t6ecl"]
+
+[node name="Random Spell Roller" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6ecl")
+metadata/_tab_index = 0
+
+[node name="PanelMargin" type="MarginContainer" parent="."]
+layout_mode = 2
+script = ExtResource("1_mp3l7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelMargin"]
+layout_mode = 2
+
+[node name="SpellOptionsVBox" type="GridContainer" parent="PanelMargin/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+columns = 2
+
+[node name="IncludeCantripsLabel" type="Label" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+layout_mode = 2
+text = "Include cantrips?"
+
+[node name="IncludeCantripsCheckButton" type="CheckButton" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SpellLevelLabel" type="Label" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Spell Level"
+
+[node name="SpellLevelOptionButton" type="OptionButton" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+selected = 0
+item_count = 10
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+popup/item_9/text = "10"
+popup/item_9/id = 9
+
+[node name="SpellCountLabel" type="Label" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+layout_mode = 2
+text = "Number of spells: "
+
+[node name="SpellCountNumberLabel" type="Label" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "##"
+
+[node name="SpellNumberLabel" type="Label" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Spell Number"
+
+[node name="SpellNumberTextEdit" type="LineEdit" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RandomSpellLabel" type="Label" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+layout_mode = 2
+text = "Random Spell?"
+
+[node name="RandomSpellButton" type="Button" parent="PanelMargin/HBoxContainer/SpellOptionsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Roll!"
