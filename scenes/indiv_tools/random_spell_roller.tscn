@@ -94,3 +94,5 @@ text = "Random Spell?"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Roll!"
+
+[connection signal="toggled" from="PanelMargin/HBoxContainer/SpellOptionsVBox/IncludeCantripsCheckButton" to="." method="_on_include_cantrips_check_button_toggled"]
